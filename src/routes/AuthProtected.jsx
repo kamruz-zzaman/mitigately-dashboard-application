@@ -15,6 +15,7 @@ const AuthProtected = ({ children }) => {
   if (loading) {
     return;
   }
+  console.log(user, accessToken);
 
   return !user && !accessToken && !loading ? (
     <Navigate to={{ pathname: "/login", state: { from: location } }} />
