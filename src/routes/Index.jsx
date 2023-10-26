@@ -36,15 +36,15 @@ const router = createBrowserRouter([
           </h1>
         ),
       },
-      {
-        path: "/login",
-        element: (
-          <PublicRoute>
-            <Login />
-          </PublicRoute>
-        ),
-      },
     ],
+  },
+  {
+    path: "/login",
+    element: (
+      <PublicRoute>
+        <Login />
+      </PublicRoute>
+    ),
   },
 ]);
 
