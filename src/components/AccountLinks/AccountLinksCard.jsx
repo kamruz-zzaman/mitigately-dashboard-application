@@ -5,7 +5,7 @@ const AccountLinksCard = ({ account }) => {
   return (
     <Link
       style={{ boxShadow: "-1px 4px 110px 9px rgba(43, 37, 37, 0.06)" }}
-      className="w-full h-full px-4 sm:px-8 py-6 sm:py-10 flex flex-col items-center justify-around gap-1 text-center rounded-xl"
+      className="w-full px-4 sm:px-8 py-6 sm:py-10 flex flex-col items-center justify-around gap-1 text-center rounded-xl"
       to=""
     >
       <figure className="w-11/12">
@@ -14,12 +14,16 @@ const AccountLinksCard = ({ account }) => {
 
       <div className="flex flex-col gap-3">
         <div>
-          <strong className="font-bold text-xl"> {balance} </strong>
+          <strong className="font-Jost font-bold text-[18px] md:text-[22px]">
+            {balance}
+          </strong>
           <p className="text-[#A5B4CB] text-sm"> Current Balance </p>
         </div>
 
         <div>
-          <h5 className="font-bold text-xl"> Creation Date </h5>
+          <h5 className="font-Jost font-bold text-[18px] md:text-[22px]">
+            Creation Date
+          </h5>
           <p className="text-[#A5B4CB] text-sm"> {createdDate} </p>
         </div>
       </div>

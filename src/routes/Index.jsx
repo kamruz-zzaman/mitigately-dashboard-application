@@ -5,6 +5,7 @@ import Login from "../pages/authentication/Login";
 import NumberVerify from "../pages/authentication/NumberVerify";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import PaymentDetails from "../pages/PaymentDetails/PaymentDetails";
+import Settings from "../pages/Settings/Settings";
 import AuthProtected from "./AuthProtected";
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/payment-details",
         element: <PaymentDetails />,
+      },
+      {
+        path: "/setting",
+        element: <Settings />,
       },
       {
         path: "*",
