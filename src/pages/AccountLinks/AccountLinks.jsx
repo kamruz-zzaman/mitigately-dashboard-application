@@ -48,8 +48,11 @@ const AccountLinks = () => {
           className="m-1 p-8 rounded-xl"
         >
           {/* top links */}
-          <div className="flex justify-between items-center mb-10">
-            <Link className="flex items-center gap-3" to="">
+          <div className="flex flex-col sm:flex-row justify-between items-center mb-10 text-center">
+            <Link
+              className="flex items-center gap-3 text-xl md:text-xl mb-4 sm:mb-0"
+              to=""
+            >
               <span>
                 <svg
                   width="23"
