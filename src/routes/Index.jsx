@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import Layout from "../layout";
 import Login from "../pages/authentication/Login";
+import NumberVerify from "../pages/authentication/NumberVerify";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import AuthProtected from "./AuthProtected";
 import PublicRoute from "./PublicRoutes";
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
         <Login />
       </PublicRoute>
     ),
+  },
+  {
+    path: "/number-verify",
+    element: <NumberVerify />,
   },
 ]);
 
