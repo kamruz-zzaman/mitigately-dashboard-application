@@ -161,8 +161,8 @@ const MenuData = () => {
     },
 
     {
-      id: "agents",
-      label: "Agents",
+      id: "accounts_link",
+      label: "Accounts Link",
       icon: agentIcon,
       link: "/agents",
       iscurrentState,
@@ -171,8 +171,8 @@ const MenuData = () => {
       },
     },
     {
-      id: "department",
-      label: "Department",
+      id: "payment_details",
+      label: "Payment Details",
       icon: departmentIcon,
       link: "/department",
       iscurrentState,
@@ -181,40 +181,10 @@ const MenuData = () => {
       },
     },
     {
-      id: "review",
-      label: "Review",
+      id: "setting",
+      label: "Settings",
       icon: reviewIcons,
       link: "/review",
-      iscurrentState,
-      click: function () {
-        setIscurrentState("Department");
-      },
-    },
-    {
-      id: "all_calls",
-      label: "All Calls",
-      icon: null,
-      link: "/all_calls",
-      iscurrentState,
-      click: function () {
-        setIscurrentState("Department");
-      },
-    },
-    {
-      id: "passed",
-      label: "Passed",
-      icon: null,
-      link: "/passed",
-      iscurrentState,
-      click: function () {
-        setIscurrentState("Department");
-      },
-    },
-    {
-      id: "failed",
-      label: "Failed",
-      icon: null,
-      link: "/failed",
       iscurrentState,
       click: function () {
         setIscurrentState("Department");
