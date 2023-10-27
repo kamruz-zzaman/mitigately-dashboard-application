@@ -3,23 +3,31 @@ import verifyBg from "../../assets/Authentication/input-key-number-bg.png";
 import gradientBg from "../../assets/Authentication/linear-gradient-bg.svg";
 
 const NumberVerify = () => {
-  const [inputFieldIndex, setInputFieldIndex] = useState(0);
+  const [inputValues, setInputValues] = useState(["", "", "", "", "", ""]);
 
-  const handleChange = (event) => {
-    const inputFieldValue = event.target.value;
+  const handleChange = (event, index) => {
+    const { value } = event.target;
+    const newInputValues = [...inputValues];
 
-    if (inputFieldValue.length > 0) {
-      setInputFieldIndex(inputFieldIndex + 1);
-
-      const nextInputField = document.querySelector(
-        `#input-field-${inputFieldIndex}`
-      );
-      if (inputFieldIndex.length == 5) {
-        nextInputField.style.
+    if (value.length > 1) {
+      newInputValues[index] = value.charAt(0);
+      if (index < 5) {
+        newInputValues[index + 1] = value.slice(1);
       }
-      nextInputField.focus();
+    } else {
+      newInputValues[index] = value;
     }
+
+    setInputValues(newInputValues);
   };
+
+  // submit data
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(inputValues);
+  };
+
   return (
     <section
       style={{ background: `url(${verifyBg})` }}
@@ -134,8 +142,24 @@ const NumberVerify = () => {
                 A text or Email with your code has been sent to ***-***-9692343.{" "}
               </p>
 
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="flex justify-around py-6 gap-2">
+                  {inputValues.map((value, index) => (
+                    <input
+                      key={index}
+                      onChange={(e) => handleChange(e, index)}
+                      value={value}
+                      style={{
+                        boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
+                      }}
+                      className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[2rem] sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem]"
+                      type="number"
+                      maxLength={1}
+                    />
+                  ))}
+                </div>
+
+                {/* <div className="flex justify-around py-6 gap-2">
                   <input
                     id="input-field-0"
                     onChange={(e) => handleChange(e)}
@@ -190,7 +214,8 @@ const NumberVerify = () => {
                     className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[2rem] sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem]"
                     type="number"
                   />
-                </div>
+                </div> */}
+
                 <button
                   className="w-10/12 bg-[#0070D2] text-white rounded-sm py-2 text-center"
                   type="submit"
