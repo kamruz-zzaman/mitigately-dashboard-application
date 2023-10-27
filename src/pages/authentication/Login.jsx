@@ -7,13 +7,15 @@ import loginBg from "../../assets/Authentication/login-page-bg.png";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [number, setNumber] = useState("");
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleReg = (e) => {
     e.preventDefault();
-    if (username == "admin" && password == "123456") {
+    // if (username == "admin" && password == "123456") {
+    if (number == "1234567890") {
       navigate("/number-verify");
       sessionStorage.setItem(
         "authUser",
@@ -105,7 +107,7 @@ const Login = () => {
               <p className="py-1 mb-14 text-xl text-[#000000]">
                 Welcome back! Please enter your details
               </p>
-              <form className="w-full">
+              <form onSubmit={handleReg} className="w-full">
                 <div className="flex flex-col text-left mb-6">
                   <label className="cursor-pointer" htmlFor="phoneNumber">
                     {" "}
@@ -124,6 +126,7 @@ const Login = () => {
                       className="outline-none border-none"
                       id="remember"
                       type="checkbox"
+                      onChange={(e) => setNumber(e.target.value)}
                     />
                     <label className="ml-4 cursor-pointer" htmlFor="remember">
                       Remember for 30 days
