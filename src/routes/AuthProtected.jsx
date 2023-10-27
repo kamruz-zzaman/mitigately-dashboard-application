@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { useSelector } from "react-redux";
 import { Navigate, useLocation } from "react-router-dom";
 import { useProfile } from "../components/hooks/userHooks";
 
@@ -8,15 +7,13 @@ const AuthProtected = ({ children }) => {
   // const { userProfile, loading } = useProfile();
   const { loading } = useProfile();
 
-  const state = useSelector((state) => state.auth);
+  const state = JSON.parse(sessionStorage.getItem("authUser"));
 
   const { user, accessToken } = state || {};
 
   if (loading) {
     return;
   }
-  console.log(user, accessToken);
-
   return !user && !accessToken && !loading ? (
     <Navigate to={{ pathname: "/login", state: { from: location } }} />
   ) : (

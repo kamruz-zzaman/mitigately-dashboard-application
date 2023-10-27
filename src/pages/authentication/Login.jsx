@@ -1,18 +1,16 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { userLoggedIn } from "../../features/auth/authSlice";
 
 const Login = () => {
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const dispatch = useDispatch();
 
   const handleReg = (e) => {
     e.preventDefault();
     if (username == "admin" && password == "123456") {
+      navigate("/dashboard");
       sessionStorage.setItem(
         "authUser",
         JSON.stringify({
@@ -20,16 +18,6 @@ const Login = () => {
           user: true,
         })
       );
-      console.log("sdsd");
-      dispatch(
-        userLoggedIn({
-          accessToken: "1234567890",
-          user: true,
-        })
-      );
-      console.log("333");
-
-      navigate("/dashboard");
     } else {
       alert("username is admin and password is 123456");
     }
