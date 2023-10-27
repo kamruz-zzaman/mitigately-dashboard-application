@@ -40,9 +40,9 @@ const Login = () => {
   return (
     <section>
       <div className="mx-auto font-Jost">
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
           <div
-            className="h-screen object-cover bg-no-repeat w-1/2"
+            className="h-screen object-cover bg-no-repeat w-full md:w-1/2"
             style={{ background: `url(${loginBg})` }}
           >
             <div
@@ -50,7 +50,7 @@ const Login = () => {
               className="h-full flex items-center justify-center text-white"
             >
               <div className="">
-                <h2 className="text-[4.25rem] text-center font-bold leading-[52px] max-w-xl mb-11">
+                <h2 className="text-[3rem] md:text-[4.25rem] text-center font-bold leading-[52px] max-w-xl mx-auto mb-11 ">
                   <span className="underline block mb-7"> Mitigating </span>{" "}
                   Consumer Debt
                 </h2>
@@ -60,7 +60,7 @@ const Login = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center w-1/2">
+          <div className="flex justify-center items-center h-screen w-full md:w-1/2">
             <div className="max-w-md flex flex-col items-center p-8 rounded-md w-full text-center">
               <h1 className="mb-12 text-center">
                 <svg
@@ -117,7 +117,10 @@ const Login = () => {
               </p>
               <form className="w-full">
                 <div className="flex flex-col text-left mb-6">
-                  <label htmlFor="phoneNumber"> Phone Number </label>
+                  <label className="cursor-pointer" htmlFor="phoneNumber">
+                    {" "}
+                    Phone Number{" "}
+                  </label>
                   <input
                     className="border-b border-[#E0E0E0] outline-none"
                     id="phoneNumber"

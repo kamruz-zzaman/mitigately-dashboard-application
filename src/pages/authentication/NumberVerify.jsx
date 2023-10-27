@@ -14,6 +14,9 @@ const NumberVerify = () => {
       const nextInputField = document.querySelector(
         `#input-field-${inputFieldIndex}`
       );
+      if (inputFieldIndex.length == 5) {
+        nextInputField.style.
+      }
       nextInputField.focus();
     }
   };
@@ -22,10 +25,14 @@ const NumberVerify = () => {
       style={{ background: `url(${verifyBg})` }}
       className="h-screen object-cover overflow-hidden"
     >
-      <div style={{ background: `url(${gradientBg})` }} className="h-full ">
+      <div
+        style={{ background: `url(${gradientBg})` }}
+        className="h-full p-3 md:p-5"
+      >
         <div className="container mx-auto h-full">
-          <div className="pt-6">
+          <div className="pt-1 mb-4 md:mb-1 lg:mb-0 lg:pt-6">
             <svg
+              className="w-32 lg:w-40"
               xmlns="http://www.w3.org/2000/svg"
               width="238"
               height="58"
@@ -74,11 +81,11 @@ const NumberVerify = () => {
               />
             </svg>
           </div>
-          <div className="h-full flex justify-center items-center">
-            <div className="-mt-[6rem] bg-white text-center max-w-3xl w-full py-12 px-14">
+          <div className="h-full sm:block lg:flex justify-center items-center">
+            <div className="lg:-mt-[6rem] bg-white text-center max-w-3xl w-full py-6 lg:py-12 px-7 lg:px-14">
               <div className=" mx-auto">
                 <svg
-                  className="mx-auto mb-7"
+                  className="mx-auto mb-3 md:mb-7"
                   xmlns="http://www.w3.org/2000/svg"
                   width="91"
                   height="101"
@@ -119,7 +126,7 @@ const NumberVerify = () => {
                 </svg>
               </div>
 
-              <h1 className="text-black text-[2.5rem] font-semibold">
+              <h1 className="text-black text-[1.5rem] md:text-4xl lg:text-[2.5rem] mb-2 lg:mb-4 font-semibold">
                 Authenticate Your Account{" "}
               </h1>
 
@@ -128,14 +135,14 @@ const NumberVerify = () => {
               </p>
 
               <form>
-                <div className="flex justify-around py-6 ">
+                <div className="flex justify-around py-6 gap-2">
                   <input
                     id="input-field-0"
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e)}
                     style={{
                       boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
                     }}
-                    className="w-[4rem] p-2 h-[4rem] rounded-[3px] text-black font-semibold text-center text-[3rem] outline-none"
+                    className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[2rem] sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem]"
                     type="number"
                   />
                   <input
@@ -144,7 +151,7 @@ const NumberVerify = () => {
                     style={{
                       boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
                     }}
-                    className="w-[4rem] p-2 h-[4rem] rounded-[3px] text-black font-semibold text-center text-[3rem] outline-none"
+                    className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[2rem] sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem]"
                     type="number"
                   />
                   <input
@@ -153,7 +160,7 @@ const NumberVerify = () => {
                     style={{
                       boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
                     }}
-                    className="w-[4rem] p-2 h-[4rem] rounded-[3px] text-black font-semibold text-center text-[3rem] outline-none"
+                    className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[2rem] sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem]"
                     type="number"
                   />
                   <input
@@ -162,7 +169,7 @@ const NumberVerify = () => {
                     style={{
                       boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
                     }}
-                    className="w-[4rem] p-2 h-[4rem] rounded-[3px] text-black font-semibold text-center text-[3rem] outline-none"
+                    className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[2rem] sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem]"
                     type="number"
                   />
                   <input
@@ -171,7 +178,7 @@ const NumberVerify = () => {
                     style={{
                       boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
                     }}
-                    className="w-[4rem] p-2 h-[4rem] rounded-[3px] text-black font-semibold text-center text-[3rem] outline-none"
+                    className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[2rem] sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem]"
                     type="number"
                   />
                   <input
@@ -180,7 +187,7 @@ const NumberVerify = () => {
                     style={{
                       boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
                     }}
-                    className="w-[4rem] p-2 h-[4rem] rounded-[3px] text-black font-semibold text-center text-[3rem] outline-none"
+                    className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[2rem] sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem]"
                     type="number"
                   />
                 </div>
