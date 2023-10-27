@@ -20,12 +20,14 @@ const Login = () => {
           user: true,
         })
       );
+      console.log("sdsd");
       dispatch(
         userLoggedIn({
           accessToken: "1234567890",
           user: true,
         })
       );
+      console.log("333");
 
       navigate("/dashboard");
     } else {
@@ -34,8 +36,24 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>This is login page!</h1>
+    <div className="mt-5">
+      <form onSubmit={handleReg}>
+        <input
+          type="text"
+          placeholder="name"
+          value={username}
+          className="border-2 border-[red] m-3 p-3"
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="name"
+          value={password}
+          className="border-2 border-[red] m-3 p-3"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button className="bg-slate-400 rounded-lg py-4 px-5">Login</button>
+      </form>
     </div>
   );
 };
