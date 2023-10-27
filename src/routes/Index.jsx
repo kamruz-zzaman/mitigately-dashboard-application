@@ -1,10 +1,10 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import Layout from "../layout";
+import AccountLinks from "../pages/AccountLinks/AccountLinks";
 import Login from "../pages/authentication/Login";
 import NumberVerify from "../pages/authentication/NumberVerify";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import AuthProtected from "./AuthProtected";
-import PublicRoute from "./PublicRoutes";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
         element: <Layout />,
       },
       { path: "/dashboard", element: <Dashboard /> },
+      {
+        path: "/account-links",
+        element: <AccountLinks />,
+      },
       {
         path: "*",
         element: (

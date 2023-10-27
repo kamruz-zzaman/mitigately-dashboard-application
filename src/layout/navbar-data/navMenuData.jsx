@@ -164,7 +164,7 @@ const MenuData = () => {
       id: "accounts_link",
       label: "Accounts Link",
       icon: agentIcon,
-      link: "/agents",
+      link: "/account-links",
       iscurrentState,
       click: function () {
         setIscurrentState("Agents");
