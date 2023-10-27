@@ -78,7 +78,9 @@ const AccountLinks = () => {
                   />
                 </svg>
               </span>
-              <span> Linked Accounts </span>
+              <span className="text-[22px] text-[#000] font-medium">
+                Linked Accounts
+              </span>
             </Link>
 
             <Link
@@ -106,7 +108,7 @@ const AccountLinks = () => {
           </div>
 
           {/* body items */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-[84px] md:gap-y-[54px]">
             {originalData &&
               originalData.map((account, idx) => (
                 <AccountLinksCard key={idx} account={account} />
