@@ -1,11 +1,86 @@
+import Chart from "react-apexcharts";
 import companyImage from "../../assets/companies/company.png";
 import cp1 from "../../assets/companies/cp1.png";
 import cp2 from "../../assets/companies/cp2.png";
 function Dashboard() {
+  const options = {
+    xaxis: {
+      categories: [
+        "DEC 2",
+        "DEC 3",
+        "DEC 4",
+        "DEC 5",
+        "DEC 6",
+        "DEC 7",
+        "DEC 8",
+      ],
+    },
+    chart: {
+      toolbar: {
+        show: false,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    legend: {
+      show: false,
+    },
+    stroke: {
+      width: 1,
+    },
+    tooltip: {
+      enabled: true,
+      theme: "dark",
+    },
+    markers: { show: false },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+      },
+    },
+    grid: {
+      show: true,
+      borderColor: "#EFF2F7",
+      strokeDashArray: 5,
+      xaxis: {
+        lines: {
+          show: false,
+        },
+      },
+    },
+    responsive: [
+      {
+        breakpoint: 1000,
+        options: {
+          plotOptions: {
+            bar: {
+              horizontal: false,
+            },
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    ],
+  };
+
+  const series = [
+    {
+      name: "Recordings Processed",
+      data: [2, 4, 34, 19, 22, 29, 12, 49],
+    },
+    {
+      name: "Minutes Processed",
+      data: [4, 2, 18, 34, 21, 38, 23, 51],
+    },
+  ];
+
   return (
-    <div>
+    <div className="px-5">
       {/* Dashboard header cards */}
-      <div className="mt-6 px-5">
+      <div className="mt-6">
         <div className="w-full flex gap-12 md:gap-3 lg:gap-5 flex-col md:flex-row">
           <div
             className="grow flex flex-col justify-between gap-3 bg-white 2xl:h-60 overflow-hidden w-full md:w-3/6 rounded-2xl p-8 md:px-8 lg:px-12"
@@ -215,8 +290,8 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className="w-full flex gap-8 mt-8 py-8 px-8">
-        <div className="max-w-[540px] w-full flex flex-col gap-6">
+      <div className="w-full flex flex-col md:flex-row gap-10 mt-10">
+        <div className="w-full md:w-1/2 flex flex-col gap-6">
           <div
             className="w-full p-5 rounded-2xl py-5 px-8"
             style={{ boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" }}
@@ -428,7 +503,145 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        <div></div>
+        <div className="w-full md:w-1/2">
+          <div>
+            <div className="flex justify-between mb-8">
+              <p className="text-[22px] text-[#141736] font-medium">
+                Total Debt & Trust Balance
+              </p>
+              <div className="flex items-center gap-4">
+                <span className="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="11"
+                    viewBox="0 0 18 11"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.996094 9.71389L6.56229 4.42189C6.60001 4.38603 6.65895 4.3851 6.69778 4.41976L9.91651 7.29268C9.95592 7.32785 10.0159 7.32631 10.0534 7.28915L16.0913 1.31393"
+                      stroke="#A4B4CB"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M11.271 1.31396H16.0927V6.13571"
+                      stroke="#A4B4CB"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </span>
+                <span className="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="31"
+                    height="31"
+                    viewBox="0 0 31 31"
+                    fill="none"
+                  >
+                    <rect
+                      x="0.372559"
+                      y="0.574585"
+                      width="29.8786"
+                      height="29.8786"
+                      rx="6"
+                      fill="#0070D2"
+                    />
+                    <rect
+                      x="19.729"
+                      y="8.61868"
+                      width="2.29836"
+                      height="13.7901"
+                      rx="1.14918"
+                      fill="white"
+                    />
+                    <rect
+                      x="14.1631"
+                      y="12.0662"
+                      width="2.29836"
+                      height="10.3426"
+                      rx="1.14918"
+                      fill="white"
+                    />
+                    <rect
+                      x="8.59619"
+                      y="15.5139"
+                      width="2.29836"
+                      height="6.89507"
+                      rx="1.14918"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div className="flex justify-between mb-3">
+              <div className="flex items-center gap-6">
+                <div className="flex items-center gap-3">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="23"
+                      height="24"
+                      viewBox="0 0 23 24"
+                      fill="none"
+                    >
+                      <circle
+                        cx="11.4918"
+                        cy="11.8179"
+                        r="11.4918"
+                        fill="#0070D2"
+                      />
+                      <path
+                        d="M6.31201 14.6996L10.1103 11.0884C10.148 11.0526 10.2069 11.0516 10.2458 11.0863L12.4107 13.0186C12.4501 13.0538 12.5101 13.0523 12.5476 13.0151L16.6695 8.936"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M13.3628 8.93591H16.6712V12.2443"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </span>
+                  <p>Total Debt</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="11"
+                      viewBox="0 0 18 11"
+                      fill="none"
+                    >
+                      <path
+                        d="M0.973145 10.0179L6.53934 4.72588C6.57707 4.69001 6.636 4.68909 6.67483 4.72375L9.89356 7.59666C9.93297 7.63184 9.99294 7.63029 10.0305 7.59313L16.0684 1.61792"
+                        stroke="#0070D2"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M11.248 1.61795H16.0698V6.4397"
+                        stroke="#0070D2"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </span>
+                  <p className="text-[#7C8DA7] font-Jost font-bold">+6,79%</p>
+                </div>
+              </div>
+              <div>Week</div>
+            </div>
+          </div>
+          <div className="w-full h-[220px] md:h-[320px] 2xl:h-[380px]">
+            <Chart
+              options={options}
+              series={series}
+              type="area"
+              width="100%"
+              height="100%"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

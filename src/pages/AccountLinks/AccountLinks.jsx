@@ -11,7 +11,6 @@ import data from "./AccountLinksData";
 const AccountLinks = () => {
   const [notificationStatus, setNotificationStatus] = useState(true);
   const [originalData, setOriginalData] = useState(data);
-  console.log(originalData);
 
   return (
     <section>
