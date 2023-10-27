@@ -14,7 +14,7 @@ const Login = () => {
   const handleReg = (e) => {
     e.preventDefault();
     if (username == "admin" && password == "123456") {
-      navigate("/dashboard");
+      navigate("/number-verify");
       sessionStorage.setItem(
         "authUser",
         JSON.stringify({
@@ -137,8 +137,9 @@ const Login = () => {
                 </div>
 
                 <button
+                  onClick={() => navigate("/number-verify")}
                   className="w-10/12 bg-[#0070D2] text-white rounded-sm py-2 text-center"
-                  type="submit"
+                  type="button"
                 >
                   {" "}
                   Login{" "}

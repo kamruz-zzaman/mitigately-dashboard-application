@@ -1,10 +1,11 @@
 import { useState } from "react";
 import verifyBg from "../../assets/Authentication/input-key-number-bg.png";
 import gradientBg from "../../assets/Authentication/linear-gradient-bg.svg";
+import { useNavigate } from "react-router";
 
 const NumberVerify = () => {
   const [inputValues, setInputValues] = useState(["", "", "", "", "", ""]);
-
+  const navigate = useNavigate();
   const handleChange = (event, index) => {
     const { value } = event.target;
     const newInputValues = [...inputValues];
@@ -24,8 +25,14 @@ const NumberVerify = () => {
   // submit data
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log(inputValues);
+    navigate("/dashboard");
+    sessionStorage.setItem(
+      "authUser",
+      JSON.stringify({
+        accessToken: "1234567890",
+        user: true,
+      })
+    );
   };
 
   return (

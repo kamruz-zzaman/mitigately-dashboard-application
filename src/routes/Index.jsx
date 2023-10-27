@@ -41,11 +41,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: (
-      <PublicRoute>
-        <Login />
-      </PublicRoute>
-    ),
+    element: <Login />,
   },
   {
     path: "/number-verify",
