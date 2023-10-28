@@ -5,6 +5,7 @@ import Login from "../pages/authentication/Login";
 import NumberVerify from "../pages/authentication/NumberVerify";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import AuthProtected from "./AuthProtected";
+import PaymentOverview from "../pages/PaymentOverview/PaymentOverview";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/account-links",
         element: <AccountLinks />,
+      },
+      {
+        path: "/payment-overview",
+        element: <PaymentOverview />,
       },
       {
         path: "*",
