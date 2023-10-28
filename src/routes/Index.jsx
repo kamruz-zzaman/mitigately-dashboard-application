@@ -4,6 +4,8 @@ import AccountLinks from "../pages/AccountLinks/AccountLinks";
 import Login from "../pages/authentication/Login";
 import NumberVerify from "../pages/authentication/NumberVerify";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import CreateTicket from "../pages/GetHelps/CreateTicket";
+import FAQ from "../pages/GetHelps/FAQ/FAQ";
 import PaymentDetails from "../pages/PaymentDetails/PaymentDetails";
 import Settings from "../pages/Settings/Settings";
 import AuthProtected from "./AuthProtected";
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: "/setting",
         element: <Settings />,
+      },
+      {
+        path: "/get-help/create-ticket",
+        element: <CreateTicket />,
+      },
+      {
+        path: "/get-help/faq",
+        element: <FAQ />,
       },
       {
         path: "*",
