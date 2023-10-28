@@ -25,3 +25,15 @@ input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
   display: none;
 }
+
+/* grid js style */
+tr td[data-column-id="createdDate"] {
+@apply text-[#191D23] text-base font-normal 
+}
+tr td[data-column-id="trustAmount"] {
+@apply text-[#191D23] text-base font-semibold  
+}
+tr th[data-column-id="subject"] ,
+tr td[data-column-id="subject"] {
+  @apply text-left;
+}

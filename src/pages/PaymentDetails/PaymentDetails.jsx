@@ -9,7 +9,7 @@ const PaymentDetails = () => {
   let content;
   if (paymentTab === "paymentDetails") {
     content = <PaymentForm />;
-  } else if (paymentTab === "paymentDetails") {
+  } else if (paymentTab === "paymentOverview") {
     content = <PaymentOverView />;
   }
 
@@ -20,6 +20,7 @@ const PaymentDetails = () => {
         className="w-full p-5 rounded-2xl py-5 px-8"
         style={{ boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" }}
       >
+        {/* top title */}
         <div className="flex items-center gap-4">
           <span>
             <svg
@@ -67,7 +68,7 @@ const PaymentDetails = () => {
           </p>
         </div>
 
-        {/* Paymet tabs*/}
+        {/* Payment tabs*/}
         <div className="flex items-center gap-7 mt-8 mb-9">
           <span
             className={`font-Jost text-[16px] text-[#191D23] py-2 cursor-pointer font-semibold transition-all duration-300 ${
@@ -88,6 +89,7 @@ const PaymentDetails = () => {
             Payment Details
           </span>
         </div>
+
         <div>{content}</div>
       </div>
     </div>

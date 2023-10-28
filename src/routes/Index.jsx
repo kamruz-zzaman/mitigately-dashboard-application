@@ -9,6 +9,7 @@ import FAQ from "../pages/GetHelps/FAQ/FAQ";
 import PaymentDetails from "../pages/PaymentDetails/PaymentDetails";
 import Settings from "../pages/Settings/Settings";
 import AuthProtected from "./AuthProtected";
+import SettingOverview from "../pages/Settings/SettingOverview";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/get-help/frequently-asked-questions",
         element: <FAQ />,
+      },
+      {
+        path: "/setting-overview",
+        element: <SettingOverview />,
       },
       {
         path: "*",
