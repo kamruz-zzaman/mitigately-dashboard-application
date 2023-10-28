@@ -41,11 +41,11 @@ const router = createBrowserRouter([
         element: <Settings />,
       },
       {
-        path: "/get-help/create-ticket",
+        path: "/get-help/contact-us-create-ticket",
         element: <CreateTicket />,
       },
       {
-        path: "/get-help/faq",
+        path: "/get-help/frequently-asked-questions",
         element: <FAQ />,
       },
       {
