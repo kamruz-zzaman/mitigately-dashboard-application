@@ -15,18 +15,14 @@ const Login = () => {
   const handleReg = (e) => {
     e.preventDefault();
     // if (username == "admin" && password == "123456") {
-    if (number == "1234567890") {
+    if (number.split("").length === 10) {
       navigate("/number-verify");
-      sessionStorage.setItem(
-        "authUser",
-        JSON.stringify({
-          accessToken: "1234567890",
-          user: true,
-        })
-      );
     } else {
-      alert("username is admin and password is 123456");
+      alert("Number should be 10 digits");
     }
+    // else {
+    //   alert("username is admin and password is 123456");
+    // }
   };
 
   return (
@@ -117,6 +113,7 @@ const Login = () => {
                     className="border-b border-[#E0E0E0] outline-none"
                     id="phoneNumber"
                     type="text"
+                    onChange={(e) => setNumber(e.target.value)}
                   />
                 </div>
 
@@ -126,7 +123,6 @@ const Login = () => {
                       className="outline-none border-none"
                       id="remember"
                       type="checkbox"
-                      onChange={(e) => setNumber(e.target.value)}
                     />
                     <label className="ml-4 cursor-pointer" htmlFor="remember">
                       Remember for 30 days
@@ -140,7 +136,7 @@ const Login = () => {
                 </div>
 
                 <button
-                  onClick={() => navigate("/number-verify")}
+                  onClick={handleReg}
                   className="w-10/12 bg-[#0070D2] text-white rounded-sm py-2 text-center"
                   type="button"
                 >

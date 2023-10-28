@@ -106,9 +106,9 @@ const SettingOverview = () => {
                         return _(
                           <div className="inline-flex justify-center items-center">
                             <span
-                              className={`py-1 px-2.5 rounded-[0.5rem] ${
+                              className={`py-1 px-2.5 rounded-[0.25rem] ${
                                 cell == "Solved"
-                                  ? "bg-[#064E3B] text-[#ECFDF5]"
+                                  ? "bg-[#ECFDF5] text-[#064E3B]"
                                   : cell == "In Progress"
                                   ? "bg-[#D7D7FF] text-[#090858]"
                                   : cell == "Open"
