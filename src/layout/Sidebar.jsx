@@ -15,6 +15,7 @@ const Sidebar = () => {
   const location = useLocation();
 
   const currentPath = location?.pathname.slice(1) || location;
+  console.log(currentPath);
 
   const handleSidebar = () => {
     // handle through redux
@@ -53,35 +54,29 @@ const Sidebar = () => {
         </svg>
       </button>
       <div
-        className={`bg-[#E8ECF5]  w-[250px] top-0 absolute lg:fixed  z-[1010] h-screen -left-full lg:left-0 ${
+        className={`bg-[#F5F5F5] w-[250px] border border-l-2 border-[#E8ECF5] top-0 absolute lg:fixed  z-[1010] h-screen -left-full lg:left-0 ${
           isSidebarOpen ? "left-0" : ""
         } 
         transition-all duration-300 ease-in-out  } `}
       >
         <img src={logo} className="mt-10 w-4/6 mx-auto" alt="" />
         {/* top Nav Items */}
-        <ul className="mt-6 ">
+        <ul className="mt-6 px-6">
           {menuData.map((item) => {
             return (
               <li
-                className={`my-1 font-Dm text-lg py-1.5 flex items-center ${
+                className={`my-2 font-Jost font-medium text-[16px] py-1.5 flex items-center rounded-[6px] ${
                   currentPath === item.id
-                    ? "bg-[#3637EA] text-white"
-                    : "text-black"
+                    ? "bg-[#0070D233] text-[#0070D2]"
+                    : "text-[#131635]"
                 }`}
                 key={item.id}
                 onClick={() => {
                   item.click();
                 }}
               >
-                <Link
-                  to={item.link}
-                  className="flex items-center  hover:text-gray-200 px-6 ms-2"
-                >
-                  {
-                    item.icon && item.icon
-                    // <img src={item.icon} alt="" className="w-4 h-4" />
-                  }
+                <Link to={item.link} className="flex items-center px-6 ms-2">
+                  {item.icon && item.icon}
                   <span className="ml-2">{item.label}</span>
                 </Link>
               </li>

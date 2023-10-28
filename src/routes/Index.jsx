@@ -4,6 +4,8 @@ import AccountLinks from "../pages/AccountLinks/AccountLinks";
 import Login from "../pages/authentication/Login";
 import NumberVerify from "../pages/authentication/NumberVerify";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import PaymentDetails from "../pages/PaymentDetails/PaymentDetails";
+import Settings from "../pages/Settings/Settings";
 import AuthProtected from "./AuthProtected";
 import PaymentOverview from "../pages/PaymentOverview/PaymentOverview";
 
@@ -30,8 +32,17 @@ const router = createBrowserRouter([
         element: <AccountLinks />,
       },
       {
+<<<<<<< HEAD
         path: "/payment-overview",
         element: <PaymentOverview />,
+=======
+        path: "/payment-details",
+        element: <PaymentDetails />,
+      },
+      {
+        path: "/setting",
+        element: <Settings />,
+>>>>>>> c641a4ac60ca8cb8c5d6b5391e7accead1a519e3
       },
       {
         path: "*",
