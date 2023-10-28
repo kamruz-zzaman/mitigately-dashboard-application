@@ -3,8 +3,8 @@ import Layout from "../layout";
 import AccountLinks from "../pages/AccountLinks/AccountLinks";
 import Login from "../pages/authentication/Login";
 import NumberVerify from "../pages/authentication/NumberVerify";
+import ContactUs from "../pages/ContactUs/ContactUs";
 import Dashboard from "../pages/Dashboard/Dashboard";
-import CreateTicket from "../pages/GetHelps/CreateTicket";
 import FAQ from "../pages/GetHelps/FAQ/FAQ";
 import TackFollow from "../pages/GetHelps/TicketFollow/TackFollow";
 import PaymentDetails from "../pages/PaymentDetails/PaymentDetails";
@@ -43,8 +43,8 @@ const router = createBrowserRouter([
         element: <Settings />,
       },
       {
-        path: "/get-help/contact-us-create-ticket",
-        element: <CreateTicket />,
+        path: "/get-help/contact-us",
+        element: <ContactUs />,
       },
       {
         path: "/get-help/frequently-asked-questions",

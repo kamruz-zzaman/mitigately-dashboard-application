@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Profile from "../../components/common/Profile";
 
 const CreateTicket = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -11,9 +10,8 @@ const CreateTicket = () => {
 
   return (
     <div>
-      <Profile />
       <div
-        className="w-full p-5 rounded-2xl py-5 px-8 mt-8 pb-8"
+        className="w-full p-5 rounded-2xl py-5 px-8 pb-8"
         style={{ boxShadow: "-1px 4px 110px 9px rgba(0, 0, 0, 0.06)" }}
       >
         <div className="flex items-center gap-4">
@@ -56,7 +54,10 @@ const CreateTicket = () => {
                     style={{
                       boxShadow: "-1px 4px 110px 9px rgba(43, 37, 37, 0.06)",
                     }}
-                    className="font-Jost min-h-[100px] md:h-[200px] resize-none text-[#000000] font-semibold leading-[22px] uppercase border-[1px] border-[#0070D2] rounded-[10px] py-4 px-8 bg-white placeholder:text-[16px] placeholder:font-normal placeholder:capitalize"
+                    value={
+                      "Your problem description here Your problem description hereYour problem description hereYour problem description here"
+                    }
+                    className="font-Jost capitalize min-h-[100px] md:h-[200px] resize-none text-[#000000] font-semibold leading-[22px] border-[1px] border-[#0070D2] rounded-[10px] py-4 px-8 bg-white placeholder:text-[16px] placeholder:font-normal placeholder:capitalize"
                   />
                 </div>
               </div>

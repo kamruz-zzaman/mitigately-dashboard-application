@@ -5,16 +5,34 @@ import Accordion from "./Accordion";
 const FAQ = () => {
   const accordionItems = [
     {
-      title: "Accordion 1",
-      content: "Content for Accordion 1",
+      title: "Your question is here ?",
+      content:
+        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
     },
     {
-      title: "Accordion 2",
-      content: "Content for Accordion 2",
+      title: "Your question is here ?",
+      content:
+        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
     },
     {
-      title: "Accordion 3",
-      content: "Content for Accordion 3",
+      title: "Your question is here ?",
+      content:
+        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
+    },
+    {
+      title: "Your question is here ?",
+      content:
+        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
+    },
+    {
+      title: "Your question is here ?",
+      content:
+        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
+    },
+    {
+      title: "Your question is here ?",
+      content:
+        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
     },
   ];
 
