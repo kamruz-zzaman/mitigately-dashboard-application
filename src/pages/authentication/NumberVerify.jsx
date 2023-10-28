@@ -38,6 +38,15 @@ const NumberVerify = () => {
       })
     );
   };
+  const handleKeyDown = (e, index) => {
+    if (e.key === "Backspace") {
+      if (index >= 0) {
+        inputValues[index] = "";
+        setInputValues([...inputValues]);
+        inputRefs[index - 1].current.focus();
+      }
+    }
+  };
 
   return (
     <section
@@ -159,6 +168,7 @@ const NumberVerify = () => {
                     <input
                       key={index}
                       onChange={(e) => handleInputChange(e, index)}
+                      onKeyDown={(e) => handleKeyDown(e, index)}
                       value={value}
                       ref={inputRefs[index]}
                       style={{
