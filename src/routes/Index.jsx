@@ -6,10 +6,11 @@ import NumberVerify from "../pages/authentication/NumberVerify";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import CreateTicket from "../pages/GetHelps/CreateTicket";
 import FAQ from "../pages/GetHelps/FAQ/FAQ";
+import TackFollow from "../pages/GetHelps/TicketFollow/TackFollow";
 import PaymentDetails from "../pages/PaymentDetails/PaymentDetails";
+import SettingOverview from "../pages/Settings/SettingOverview";
 import Settings from "../pages/Settings/Settings";
 import AuthProtected from "./AuthProtected";
-import SettingOverview from "../pages/Settings/SettingOverview";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/get-help/frequently-asked-questions",
         element: <FAQ />,
+      },
+      {
+        path: "/get-help/ticket-foll",
+        element: <TackFollow />,
       },
       {
         path: "/setting-overview",
