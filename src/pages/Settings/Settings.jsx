@@ -6,7 +6,7 @@ const Settings = () => {
     <div>
       <Profile />
       <div
-        className="w-full h-screen p-5 rounded-2xl py-5 px-8"
+        className="w-full p-5 rounded-2xl py-2 px-3 md:py-5 md:px-8"
         style={{ boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" }}
       >
         <div className="flex items-center gap-4">
@@ -28,9 +28,9 @@ const Settings = () => {
             Settings
           </p>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center pb-10">
           <div
-            className="max-w-[650px] w-full py-8 px-10 rounded-[10px] mt-24"
+            className="max-w-[650px] w-full py-3 px-5 md:py-8 md:px-10 rounded-[10px] bg-white mt-24 mb-24 pb-10"
             style={{ boxShadow: "-1px 4px 110px 9px rgba(0, 0, 0, 0.06)" }}
           >
             <h2 className="text-[18px] sm:text-[22px] text-[#000000] font-Jost font-medium mb-5">
@@ -56,7 +56,7 @@ const Settings = () => {
                   </div>
                 </div>
 
-                <div className="w-full flex gap-10">
+                <div className="w-full flex flex-col md:flex-row gap-10">
                   <div className="w-full flex flex-col gap-3">
                     <label
                       htmlFor=""

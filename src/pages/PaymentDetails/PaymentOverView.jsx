@@ -48,12 +48,7 @@ const PaymentOverView = () => {
   ]);
 
   return (
-    <div
-      className="mt-6 border-[#3048AD] p-[1px] rounded-2xl w-full"
-      // style={{
-      //   background: `linear-gradient(to right, #2d2d47, #3048AD) `,
-      // }}
-    >
+    <div className="mt-6 border-[#3048AD] p-[1px] rounded-2xl w-full">
       <div className="h-full rounded-2xl py-4 px-8 max-w-full">
         {originalData.length ? (
           <div className="relative">
@@ -116,7 +111,7 @@ const PaymentOverView = () => {
                     container: "",
                     table:
                       "items-center bg-transparent min-w-[80vw] lg:min-w-[70vw] border-collapse  font-Ar mt-6 mb-8 table-auto",
-                    th: "px-2 bg-blueGray-50 text-blueGray-500 align-middle py-3 text-base whitespace-nowrap font-semibold text-center",
+                    th: "px-2 bg-blueGray-50 text-blueGray-500 align-middle py-3 text-base whitespace-nowrap font-semibold text-center border-b border-[#E7EAEE]",
                     td: "border-t-0 px-1 md:px-2  border-l-0 border-r-0 text-base whitespace-nowrap p-2 md:p-4  text-center text-[#64748B] border-b border-[#E7EAEE]",
                     paginationSummary: "hidden md:block",
                     paginationButton: "border px-3 py-1 me-3 ",
