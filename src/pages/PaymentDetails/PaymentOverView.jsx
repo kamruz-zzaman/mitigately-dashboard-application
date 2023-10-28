@@ -111,10 +111,10 @@ const PaymentOverView = () => {
                     container: "",
                     table:
                       "items-center bg-transparent min-w-[80vw] lg:min-w-[70vw] border-collapse  font-Ar mt-6 mb-8 table-auto",
-                    th: "px-2 bg-blueGray-50 text-blueGray-500 align-middle py-3 text-base whitespace-nowrap font-semibold text-center border-b border-[#E7EAEE]",
-                    td: "border-t-0 px-1 md:px-2  border-l-0 border-r-0 text-base whitespace-nowrap p-2 md:p-4  text-center text-[#64748B] border-b border-[#E7EAEE]",
+                    th: "px-2 bg-blueGray-50 text-blueGray-500 align-middle py-3 text-base whitespace-nowrap font-semibold border-b border-[#E7EAEE] text-left",
+                    td: "border-t-0 px-1 md:px-2  border-l-0 border-r-0 text-base whitespace-nowrap p-2 md:p-4 text-[#64748B] border-b border-[#E7EAEE] text-left font-semibold",
                     paginationSummary: "hidden md:block",
-                    paginationButton: "border px-3 py-1 me-3 ",
+                    paginationButton: "border px-3 py-1 me-3",
                     paginationButtonCurrent:
                       "bg-[#3637EA] px-3 py-1 border-[#3637EA] ",
                     paginationButtonNext: "border-none",
