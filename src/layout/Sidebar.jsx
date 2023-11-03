@@ -32,42 +32,41 @@ const Sidebar = () => {
   return (
     <React.Fragment>
       <button
-        className=" absolute top-6 left-8 block lg:hidden text-white z-50"
+        className="absolute top-6 left-8 block lg:hidden text-white z-50"
         onClick={handleSidebar}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24px"
-          height="24px"
-          fill="none"
-          strokeWidth="1.5"
+          width="24"
+          height="24"
           viewBox="0 0 24 24"
-          color="#fff"
+          fill="none"
         >
           <path
-            stroke="#fff"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3 5h18M3 12h18M3 19h18"
-          ></path>
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M3.948 6H20.051C20.573 6 21 6.427 21 6.949V7.051C21 7.573 20.573 8 20.051 8H3.948C3.426 8 3 7.573 3 7.051V6.949C3 6.427 3.426 6 3.948 6ZM20.051 11H3.948C3.426 11 3 11.427 3 11.949V12.051C3 12.573 3.426 13 3.948 13H20.051C20.573 13 21 12.573 21 12.051V11.949C21 11.427 20.573 11 20.051 11ZM20.051 16H3.948C3.426 16 3 16.427 3 16.949V17.051C3 17.573 3.426 18 3.948 18H20.051C20.573 18 21 17.573 21 17.051V16.949C21 16.427 20.573 16 20.051 16Z"
+            fill="#92929D"
+          />
         </svg>
       </button>
       <div
-        className={`bg-[#F5F5F5] w-[250px] border border-l-2 border-[#E8ECF5] top-0 absolute lg:fixed  z-[1010] h-screen -left-full lg:left-0 ${
+        className={`bg-[#F5F5F5] w-[250px] border border-l-2 border-[#E8ECF5] top-0 absolute lg:fixed z-[1010] h-screen -left-full lg:left-0 ${
           isSidebarOpen ? "left-0" : ""
         } 
         transition-all duration-300 ease-in-out  } `}
       >
-        <img src={logo} className="mt-10 w-4/6 mx-auto" alt="" />
+        <Link to={"/"}>
+          <img src={logo} className="mt-10 w-4/6 mx-auto" alt="" />
+        </Link>
         {/* top Nav Items */}
-        <ul className="mt-6 px-6">
+        <ul className="mt-6">
           {menuData.map((item) => {
             return (
               <li
-                className={`my-2 font-Jost font-medium text-[16px] py-1.5 flex items-center rounded-[6px] ${
+                className={`relative my-2 px-6 font-Jost font-medium text-[16px] flex items-center ${
                   currentPath === item.id
-                    ? "bg-[#0070D233] text-[#0070D2]"
+                    ? "after:content-[''] after:absolute after:top-0 after:left-0 after:w-[5px] after:h-full z-50 after:bg-[#0070D2] after:rounded-tr-lg after:rounded-br-lg"
                     : "text-[#131635]"
                 }`}
                 key={item.id}
@@ -75,10 +74,21 @@ const Sidebar = () => {
                   item.click();
                 }}
               >
-                <Link to={item.link} className="flex items-center px-6 ms-2">
-                  {item.icon && item.icon}
-                  <span className="ml-2">{item.label}</span>
-                </Link>
+                <div
+                  className={`w-[95%] py-2 pl-2 rounded-[6px] ${
+                    currentPath === item.id
+                      ? "bg-[#0070D233] text-[#0070D2]"
+                      : "text-[#131635]"
+                  }`}
+                >
+                  <Link
+                    to={item.link}
+                    className="flex items-center gap-[10px] ms-2"
+                  >
+                    {item.icon && item.icon}
+                    <span>{item.label}</span>
+                  </Link>
+                </div>
               </li>
             );
           })}
@@ -87,10 +97,7 @@ const Sidebar = () => {
         {/* Bottom Items */}
         <div className="absolute bottom-8 right-0 left-0">
           {/* Logout */}
-          <div
-            className="ms-2 px-6 flex items-center cursor-pointer py-2"
-            onClick={logout}
-          >
+          <div className="ms-2 px-6 flex items-center cursor-pointer py-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -119,10 +126,9 @@ const Sidebar = () => {
               FAQ's
             </Link>
             <Link
-              to={"/get-help/contact-us-create-ticket"}
+              to={"/get-help/contact-us"}
               className={`pl-20 text-left ${
-                currentPath === "get-help/contact-us-create-ticket" &&
-                "bg-[#C3DAED]"
+                currentPath === "get-help/contact-us" && "bg-[#C3DAED]"
               }`}
             >
               Contact US
