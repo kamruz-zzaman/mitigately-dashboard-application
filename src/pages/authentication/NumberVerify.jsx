@@ -50,7 +50,11 @@ const NumberVerify = () => {
 
   return (
     <section
-      style={{ background: `url(${verifyBg})` }}
+      style={{
+        background: `url(${verifyBg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
       className="h-screen object-cover overflow-hidden"
     >
       <div
@@ -158,9 +162,7 @@ const NumberVerify = () => {
                 Authenticate Your Account{" "}
               </h1>
 
-              <p>
-                A text or Email with your code has been sent to ***-***-9692343.{" "}
-              </p>
+              <p>A text has been sent to your number on file</p>
 
               <form onSubmit={handleSubmit}>
                 <div className="flex justify-around py-6 gap-2">

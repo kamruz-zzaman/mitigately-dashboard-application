@@ -22,7 +22,7 @@ const AccountLinksCard = ({ account }) => {
 
         <div>
           <h5 className="font-Jost font-bold text-[18px] md:text-[22px]">
-            Creation Date
+            Link Date
           </h5>
           <p className="text-[#A5B4CB] text-sm"> {createdDate} </p>
         </div>

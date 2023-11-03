@@ -64,7 +64,7 @@ const PaymentOverView = () => {
                   ])}
                   columns={[
                     {
-                      name: "Created Date",
+                      name: "Payment Date",
                       formatter: (cell) => {
                         const date = new Date(cell);
                         const day = date.getDate();
@@ -75,7 +75,7 @@ const PaymentOverView = () => {
                       },
                     },
                     {
-                      name: "Trust Amount",
+                      name: "Payment Amount",
                     },
                     {
                       name: "Status",
@@ -99,9 +99,9 @@ const PaymentOverView = () => {
                         );
                       },
                     },
-                    {
-                      name: "Trust Amount",
-                    },
+                    // {
+                    //   name: "Trust Amount",
+                    // },
                   ]}
                   // search={false}
                   // pagination={{

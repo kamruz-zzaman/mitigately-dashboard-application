@@ -10,8 +10,6 @@ const ContactUs = () => {
   let content;
   if (ticketPage === "ticketOverview") {
     content = <SettingOverview />;
-  } else if (ticketPage === "myActivities") {
-    content = <TackFollow />;
   } else if (ticketPage === "createTicket") {
     content = <CreateTicket />;
   }
@@ -34,7 +32,7 @@ const ContactUs = () => {
           >
             Overview
           </span>
-          <span
+          {/* <span
             className={`font-Jost text-[16px] text-[#191D23] py-2 cursor-pointer font-semibold transition-all duration-300 ${
               ticketPage === "myActivities" &&
               "border-[#047857] border-b-2 font-semibold"
@@ -42,7 +40,7 @@ const ContactUs = () => {
             onClick={() => setTicketPage("myActivities")}
           >
             My Activities
-          </span>
+          </span> */}
           <span
             className={`font-Jost text-[16px] text-[#191D23] py-2 cursor-pointer font-semibold transition-all duration-300 ${
               ticketPage === "createTicket" &&

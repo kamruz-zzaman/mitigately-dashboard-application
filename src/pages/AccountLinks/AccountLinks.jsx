@@ -83,7 +83,7 @@ const AccountLinks = () => {
               </span>
             </Link>
 
-            <Link
+            {/* <Link
               className="flex items-center gap-3 text-[#5E636A]  font-medium text-base"
               to=""
             >
@@ -104,11 +104,11 @@ const AccountLinks = () => {
                   />
                 </svg>
               </span>
-            </Link>
+            </Link> */}
           </div>
 
           {/* body items */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-[84px] md:gap-y-[54px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-[94px] md:gap-y-[64px]">
             {originalData &&
               originalData.map((account, idx) => (
                 <AccountLinksCard key={idx} account={account} />

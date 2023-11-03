@@ -5,34 +5,31 @@ import Accordion from "./Accordion";
 const FAQ = () => {
   const accordionItems = [
     {
-      title: "Your question is here ?",
+      title:
+        "What should I expect now that I've enrolled in Mitigately's debt settlement program?",
       content:
-        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
+        "Welcome to Mitigately! Now that you're enrolled, here’s what to expect: First, we'll start by creating a detailed plan tailored to your financial situation. You will begin making regular deposits into a dedicated savings account, which will be used to negotiate settlements with your creditors. Throughout this process, our team will keep you updated on our progress and will be available to answer any questions you may have. Remember, the key to success in debt settlement is consistent saving and communication.",
     },
     {
-      title: "Your question is here ?",
+      title: "How long will it take for Mitigately to settle my debts?",
       content:
-        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
+        "The timeline for settling debts varies based on individual circumstances, including the total amount of debt and your ability to save funds for settlements. Typically, our clients start seeing settlement offers within the first few months of enrollment, and most complete the program within 24 to 48 months. We'll work with you to set realistic expectations and will negotiate aggressively on your behalf to expedite the process as much as possible.",
     },
     {
-      title: "Your question is here ?",
+      title:
+        "Can I continue using my credit cards while enrolled in the program?",
       content:
-        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
+        "Once you are enrolled in Mitigately’s debt settlement program, we generally advise against using your credit cards. Continuing to accrue new debt can undermine the settlement process and your overall financial stability. Our goal is to help you get out of debt, and halting further credit card use is an essential step in that direction.",
     },
     {
-      title: "Your question is here ?",
+      title: "How will enrolling with Mitigately affect my credit score?",
       content:
-        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
+        "As you are likely aware, participating in a debt settlement program requires us to negotiate with creditors on accounts that are delinquent, which can negatively impact your credit score in the short term. However, settling your debts will ultimately relieve your financial burden, and we'll guide you on how to improve your credit score once your debts are settled.",
     },
     {
-      title: "Your question is here ?",
+      title: "What happens if a creditor won't settle or takes legal action?",
       content:
-        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
-    },
-    {
-      title: "Your question is here ?",
-      content:
-        "Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is here Your question is hereYour question is here Your question is here Your question is here Your question is here",
+        "While most creditors are open to settlement, there's a chance that some may not agree to negotiate or may pursue legal action to collect the debt. In such cases, Mitigately has strategies and protocols in place to handle these situations. We work with a network of legal partners to support you in the event of legal action and will continue to negotiate for a settlement that is in your best interest. Remember, our team is here to stand by you every step of the way.",
     },
   ];
 

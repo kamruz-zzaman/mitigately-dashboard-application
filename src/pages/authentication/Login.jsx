@@ -28,22 +28,25 @@ const Login = () => {
   return (
     <section>
       <div className="mx-auto font-Jost">
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col-reverse md:flex-row">
           <div
             className="h-screen object-cover bg-no-repeat w-full md:w-1/2"
-            style={{ background: `url(${loginBg})` }}
+            style={{
+              background: `url(${loginBg})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
           >
             <div
               style={{ background: `url(${gradientBg})` }}
               className="h-full flex items-center justify-center text-white"
             >
               <div className="">
-                <h2 className="text-[3rem] md:text-[4.25rem] text-center font-bold leading-[52px] max-w-xl mx-auto mb-11 ">
-                  <span className="underline block mb-7"> Mitigating </span>{" "}
-                  Consumer Debt
+                <h2 className="text-[3rem] md:text-[4.25rem] text-center font-bold leading-[52px]  mx-auto mb-11 ">
+                  <span className="block mb-7"> Mitigating | Dashboard</span>
                 </h2>
                 <p className="text-3xl w-10/12 text-center mx-auto">
-                  Together, we pave the way to a brighter, debt-free tomorrow.
+                  Helping consumers mitigate overwhelming debt.
                 </p>
               </div>
             </div>
@@ -112,7 +115,7 @@ const Login = () => {
                   <input
                     className="border-b border-[#E0E0E0] outline-none"
                     id="phoneNumber"
-                    type="text"
+                    type="tel"
                     onChange={(e) => setNumber(e.target.value)}
                   />
                 </div>
@@ -125,7 +128,7 @@ const Login = () => {
                       type="checkbox"
                     />
                     <label className="ml-4 cursor-pointer" htmlFor="remember">
-                      Remember for 30 days
+                      Remember me for 30 days
                     </label>
                   </div>
 

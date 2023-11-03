@@ -1,4 +1,5 @@
-import React from "react";
+import { Menu, Transition } from "@headlessui/react";
+import React, { Fragment } from "react";
 
 const PaymentForm = () => {
   return (
@@ -43,7 +44,7 @@ const PaymentForm = () => {
               <h4 className="font-Jost text-[28px] leading-10 font-bold">
                 $146.80
               </h4>
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <div className="flex items-center gap-3">
                   <span>
                     <svg
@@ -72,7 +73,7 @@ const PaymentForm = () => {
                   <p className="text-[#34AA69]">17 %</p>
                 </div>
                 <p>Since last week</p>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -112,7 +113,7 @@ const PaymentForm = () => {
               <h4 className="font-Jost text-[28px] leading-10 font-bold">
                 $146.80
               </h4>
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <div className="flex items-center gap-3">
                   <span>
                     <svg
@@ -141,7 +142,7 @@ const PaymentForm = () => {
                   <p className="text-[#34AA69]">17 %</p>
                 </div>
                 <p>Since last week</p>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -179,7 +180,7 @@ const PaymentForm = () => {
 
             <div className="flex flex-col gap-8">
               <h4 className="font-Jost text-[28px] leading-10 font-bold">04</h4>
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <div className="flex items-center gap-3">
                   <span>
                     <svg
@@ -208,7 +209,7 @@ const PaymentForm = () => {
                   <p className="text-[#34AA69]">17 %</p>
                 </div>
                 <p>Since last week</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -226,7 +227,7 @@ const PaymentForm = () => {
                 Account Number
               </label>
               <input
-                type="text"
+                type="tel"
                 placeholder="1234567990"
                 style={{
                   boxShadow: "-1px 4px 110px 9px rgba(43, 37, 37, 0.06)",
@@ -243,7 +244,7 @@ const PaymentForm = () => {
                 Routing Number
               </label>
               <input
-                type="text"
+                type="tel"
                 placeholder="Routing Number"
                 style={{
                   boxShadow: "-1px 4px 110px 9px rgba(43, 37, 37, 0.06)",
@@ -288,21 +289,71 @@ const PaymentForm = () => {
               />
             </div>
             <div className="w-full flex flex-col gap-3">
+              <div>
+                <label
+                  htmlFor=""
+                  className="font-Jost text-[14px] text-[#64748B] font-semibold leading-5"
+                >
+                  Account Type
+                </label>
+              </div>
+              <Menu as="div" className="relative inline-block text-left">
+                <div>
+                  <Menu.Button
+                    style={{
+                      boxShadow: "-1px 4px 110px 9px rgba(43, 37, 37, 0.06)",
+                    }}
+                    className="w-full font-Jost text-[#064E3B] font-semibold leading-[22px] uppercase border-[1px] border-[#0070D2] rounded-[10px] py-5 px-8 bg-[#ECFDF5] text-center placeholder:text-[16px] placeholder:uppercase placeholder:text-[#064E3B]"
+                  >
+                    Checking
+                  </Menu.Button>
+                </div>
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
+                >
+                  <Menu.Items className="absolute right-0 mt-2 w-full origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                    <div className="px-1 py-1 ">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button
+                            type="button"
+                            className={`${
+                              active
+                                ? "bg-violet-500 text-white"
+                                : "text-gray-900"
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                          >
+                            Saving
+                          </button>
+                        )}
+                      </Menu.Item>
+                    </div>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
+            </div>
+            <div className="w-full flex flex-col gap-3">
               <label
                 htmlFor=""
-                className="font-Jost text-[14px] text-[#64748B] font-semibold leading-5"
+                className="font-Jost text-[14px] text-[#64748B] font-semibold leading-5 invisible"
               >
-                Account Type
+                Name on Account
               </label>
-              <input
-                type="text"
-                placeholder="Checking"
+              <button
+                type="submit"
                 style={{
                   boxShadow: "-1px 4px 110px 9px rgba(43, 37, 37, 0.06)",
                 }}
-                readOnly
-                className="font-Jost text-[#064E3B] font-semibold leading-[22px] uppercase border-[1px] border-[#0070D2] rounded-[10px] py-5 px-8 bg-[#ECFDF5] text-center placeholder:text-[16px] placeholder:uppercase placeholder:text-[#064E3B]"
-              />
+                className="font-Jost text-[#000000] font-semibold leading-[22px] uppercase border-[1px] border-[#0070D2] rounded-[10px] py-5 px-8 bg-[#46c68a] placeholder:text-[16px] placeholder:font-normal placeholder:capitalize"
+              >
+                Update Account
+              </button>
             </div>
           </div>
         </form>

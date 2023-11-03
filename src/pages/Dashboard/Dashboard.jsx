@@ -122,7 +122,7 @@ function Dashboard() {
                 <h4 className="font-Jost text-[28px] leading-10 font-bold">
                   $146.80
                 </h4>
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <div className="flex items-center gap-3">
                     <span>
                       <svg
@@ -151,7 +151,7 @@ function Dashboard() {
                     <p className="text-[#34AA69]">17 %</p>
                   </div>
                   <p>Since last week</p>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -191,7 +191,7 @@ function Dashboard() {
                 <h4 className="font-Jost text-[28px] leading-10 font-bold">
                   $146.80
                 </h4>
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <div className="flex items-center gap-3">
                     <span>
                       <svg
@@ -220,7 +220,7 @@ function Dashboard() {
                     <p className="text-[#34AA69]">17 %</p>
                   </div>
                   <p>Since last week</p>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -260,7 +260,7 @@ function Dashboard() {
                 <h4 className="font-Jost text-[28px] leading-10 font-bold">
                   04
                 </h4>
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <div className="flex items-center gap-3">
                     <span>
                       <svg
@@ -289,7 +289,7 @@ function Dashboard() {
                     <p className="text-[#34AA69]">17 %</p>
                   </div>
                   <p>Since last week</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -458,7 +458,7 @@ function Dashboard() {
                     </svg>
                   </span>
                   <p className="text-[22px] font-medium font-Jost text-[#141736]">
-                    Peyments
+                    Payments
                   </p>
                 </div>
                 <div className="flex items-center gap-[7px]">
@@ -610,7 +610,7 @@ function Dashboard() {
                     </span>
                     <p>Total Debt</p>
                   </div>
-                  <div className="flex items-center gap-3">
+                  {/* <div className="flex items-center gap-3">
                     <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -632,7 +632,7 @@ function Dashboard() {
                       </svg>
                     </span>
                     <p className="text-[#7C8DA7] font-Jost font-bold">+6,79%</p>
-                  </div>
+                  </div> */}
                 </div>
                 <div>Week</div>
               </div>

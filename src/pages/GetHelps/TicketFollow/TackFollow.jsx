@@ -26,30 +26,6 @@ const TackFollow = () => {
     <section>
       <div className="container mx-auto">
         {/* head part */}
-        <div className="flex items-center justify-end mb-10">
-          <div className="flex items-center gap-5">
-            {/* notification bel */}
-            <div className="relative">
-              <figure className="w-6 h-6">
-                <img className="w-full h-full" src={notificationIcons} />{" "}
-              </figure>
-              {notificationStatus && (
-                <span className="w-2 h-2 bg-[#7267CB] rounded-full absolute top-[3px] right-[3px]"></span>
-              )}
-            </div>
-
-            {/* profile icons */}
-            <div>
-              <figure className="w-8 h-8 rounded-full overflow-hidden">
-                <img
-                  className="w-full h-full"
-                  src={profileImg}
-                  alt="profile image"
-                />
-              </figure>
-            </div>
-          </div>
-        </div>
 
         <div>
           <h1 className="text-[#191D23] font-bold text-3xl">
