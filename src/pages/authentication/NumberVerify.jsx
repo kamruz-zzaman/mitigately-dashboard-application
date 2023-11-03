@@ -1,25 +1,29 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import verifyBg from "../../assets/Authentication/input-key-number-bg.png";
 import gradientBg from "../../assets/Authentication/linear-gradient-bg.svg";
 import { useNavigate } from "react-router";
 
 const NumberVerify = () => {
-  const [inputValues, setInputValues] = useState(["", "", "", "", "", ""]);
   const navigate = useNavigate();
-  const handleChange = (event, index) => {
-    const { value } = event.target;
-    const newInputValues = [...inputValues];
 
-    if (value.length > 1) {
-      newInputValues[index] = value.charAt(0);
-      if (index < 5) {
-        newInputValues[index + 1] = value.slice(1);
+  const [inputValues, setInputValues] = useState(["", "", "", "", "", ""]);
+  let inputRefs = [useRef(), useRef(), useRef(), useRef(), useRef(), useRef()];
+
+  const handleInputChange = (e, index) => {
+    const { value } = e.target;
+
+    if (index < 5 && value.length === 1) {
+      inputValues[index] = value;
+      setInputValues([...inputValues]);
+      inputRefs[index + 1].current.focus();
+    } else if (index === 5) {
+      if (value.length === 1) {
+        inputValues[index] = value;
+        setInputValues([...inputValues]);
+      } else {
+        setInputValues([...inputValues]);
       }
-    } else {
-      newInputValues[index] = value;
     }
-
-    setInputValues(newInputValues);
   };
 
   // submit data
@@ -33,6 +37,15 @@ const NumberVerify = () => {
         user: true,
       })
     );
+  };
+  const handleKeyDown = (e, index) => {
+    if (e.key === "Backspace") {
+      if (index >= 0) {
+        inputValues[index] = "";
+        setInputValues([...inputValues]);
+        inputRefs[index - 1].current.focus();
+      }
+    }
   };
 
   return (
@@ -154,8 +167,10 @@ const NumberVerify = () => {
                   {inputValues.map((value, index) => (
                     <input
                       key={index}
-                      onChange={(e) => handleChange(e, index)}
+                      onChange={(e) => handleInputChange(e, index)}
+                      onKeyDown={(e) => handleKeyDown(e, index)}
                       value={value}
+                      ref={inputRefs[index]}
                       style={{
                         boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
                       }}
