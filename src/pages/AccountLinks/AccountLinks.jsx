@@ -8,6 +8,7 @@ import profileImg from "../../assets/AccountLinks/profile-image.png";
 import AccountLinksCard from "../../components/AccountLinks/AccountLinksCard";
 import data from "./AccountLinksData";
 import Profile from "../../components/common/Profile";
+import Footer from "../../components/common/Footer";
 
 const AccountLinks = () => {
   const [notificationStatus, setNotificationStatus] = useState(true);
@@ -138,6 +139,7 @@ const AccountLinks = () => {
             </button>
           </div>
         </div>
+        <Footer />
       </div>
     </section>
   );

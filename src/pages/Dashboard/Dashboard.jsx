@@ -3,6 +3,7 @@ import companyImage from "../../assets/companies/company.png";
 import cp1 from "../../assets/companies/cp1.png";
 import cp2 from "../../assets/companies/cp2.png";
 import Profile from "../../components/common/Profile";
+import Footer from "../../components/common/Footer";
 function Dashboard() {
   const options = {
     xaxis: {
@@ -649,6 +650,7 @@ function Dashboard() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

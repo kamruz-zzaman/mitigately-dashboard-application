@@ -1,5 +1,6 @@
 import React from "react";
 import Profile from "../../components/common/Profile";
+import Footer from "../../components/common/Footer";
 
 const Settings = () => {
   return (
@@ -103,6 +104,7 @@ const Settings = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

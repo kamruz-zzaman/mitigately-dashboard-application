@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Profile from "../../components/common/Profile";
 import PaymentForm from "./PaymentForm";
 import PaymentOverView from "./PaymentOverView";
+import Footer from "../../components/common/Footer";
 
 const PaymentDetails = () => {
   const [paymentTab, setPaymentTab] = useState("paymentOverview");
@@ -92,6 +93,7 @@ const PaymentDetails = () => {
 
         <div className="">{content}</div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import Profile from "../../../components/common/Profile";
 import Accordion from "./Accordion";
+import Footer from "../../../components/common/Footer";
 
 const FAQ = () => {
   const accordionItems = [
@@ -44,6 +45,7 @@ const FAQ = () => {
           <Accordion items={accordionItems} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

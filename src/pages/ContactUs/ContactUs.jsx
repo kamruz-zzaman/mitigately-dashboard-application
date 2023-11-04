@@ -3,6 +3,7 @@ import Profile from "../../components/common/Profile";
 import CreateTicket from "../GetHelps/CreateTicket";
 import TackFollow from "../GetHelps/TicketFollow/TackFollow";
 import SettingOverview from "../Settings/SettingOverview";
+import Footer from "../../components/common/Footer";
 
 const ContactUs = () => {
   const [ticketPage, setTicketPage] = useState("ticketOverview");
@@ -54,6 +55,7 @@ const ContactUs = () => {
 
         <div>{content}</div>
       </div>
+      <Footer />
     </div>
   );
 };
