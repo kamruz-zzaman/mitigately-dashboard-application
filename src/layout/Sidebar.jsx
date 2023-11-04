@@ -96,8 +96,8 @@ const Sidebar = () => {
         </ul>
 
         {/* Bottom Items */}
-        <div className="absolute bottom-10 right-0 left-0">
-          <div className="pl-5">
+        <div className="absolute bottom-24 md:bottom-10 right-0 left-0">
+          <div className="pl-11">
             <button
               onClick={() => setChildrenView(!childrenView)}
               className="flex items-center"
@@ -122,7 +122,7 @@ const Sidebar = () => {
           {(childrenView ||
             currentPath === "get-help/frequently-asked-questions" ||
             currentPath === "get-help/contact-us") && (
-            <div className="ml-10 mt-2">
+            <div className="ml-16 mt-2">
               <div
                 className={`w-[95%] py-2 pl-2 rounded-[6px] ${
                   currentPath === "get-help/frequently-asked-questions"

@@ -7,6 +7,7 @@ import profileImg from "../../assets/AccountLinks/profile-image.png";
 
 import AccountLinksCard from "../../components/AccountLinks/AccountLinksCard";
 import data from "./AccountLinksData";
+import Profile from "../../components/common/Profile";
 
 const AccountLinks = () => {
   const [notificationStatus, setNotificationStatus] = useState(true);
@@ -16,9 +17,10 @@ const AccountLinks = () => {
     <section>
       <div className="">
         {/* head part */}
-        <div className="flex items-center justify-end mb-10">
+        <Profile />
+
+        {/* <div className="flex items-center justify-end mb-10">
           <div className="flex items-center gap-5">
-            {/* notification bel */}
             <div className="relative">
               <figure className="w-6 h-6">
                 <img className="w-full h-full" src={notificationIcons} />{" "}
@@ -28,7 +30,6 @@ const AccountLinks = () => {
               )}
             </div>
 
-            {/* profile icons */}
             <div>
               <figure className="w-8 h-8 rounded-full overflow-hidden">
                 <img
@@ -39,7 +40,7 @@ const AccountLinks = () => {
               </figure>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Body part */}
         <div

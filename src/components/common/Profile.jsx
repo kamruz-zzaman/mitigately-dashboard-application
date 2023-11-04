@@ -1,14 +1,19 @@
 import React, { Fragment } from "react";
 import UserImg from "../../assets/user.png";
 import { Menu, Transition } from "@headlessui/react";
+import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   return (
-    <div className="w-full flex justify-end">
+    <div className="w-full flex justify-between md:justify-end items-center ">
+      <Link to="/" className="w-full">
+        <img src={logo} className="ps-3 md:ps-0 w-2/6 block md:hidden" alt="" />
+      </Link>
       <div className="flex items-center gap-5 py-5">
         <Menu as="div" className="relative inline-block text-left">
           <div>
-            <Menu.Button>
+            <Menu.Button className={"flex"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
@@ -66,7 +71,7 @@ const Profile = () => {
         </Menu>
         <Menu as="div" className="relative inline-block text-left">
           <div>
-            <Menu.Button>
+            <Menu.Button className={"flex"}>
               <svg
                 viewBox="0 0 512 512"
                 fill="currentColor"

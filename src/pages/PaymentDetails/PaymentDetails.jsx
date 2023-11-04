@@ -90,7 +90,7 @@ const PaymentDetails = () => {
           </span>
         </div>
 
-        <div>{content}</div>
+        <div className="">{content}</div>
       </div>
     </div>
   );

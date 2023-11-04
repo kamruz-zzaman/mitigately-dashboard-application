@@ -49,7 +49,7 @@ const PaymentOverView = () => {
 
   return (
     <div className="mt-6 border-[#3048AD] p-[1px] rounded-2xl w-full">
-      <div className="h-full rounded-2xl py-4 px-8 max-w-full">
+      <div className="h-full rounded-2xl py-4 px-0 md:px-8 max-w-full">
         {originalData.length ? (
           <div className="relative">
             <div className="relative flex justify-between mb-3 mt-1    w-full flex-col lg:flex-row bg-transparent rounded overflow-x-auto">
@@ -110,9 +110,9 @@ const PaymentOverView = () => {
                   className={{
                     container: "",
                     table:
-                      "items-center bg-transparent min-w-[80vw] lg:min-w-[70vw] border-collapse  font-Ar mt-6 mb-8 table-auto",
-                    th: "px-2 bg-blueGray-50 text-blueGray-500 align-middle py-3 text-base whitespace-nowrap font-semibold border-b border-[#E7EAEE] text-left",
-                    td: "border-t-0 px-1 md:px-2  border-l-0 border-r-0 text-base whitespace-nowrap p-2 md:p-4 text-[#64748B] border-b border-[#E7EAEE] text-left font-semibold",
+                      "items-center bg-transparent  lg:min-w-[62vw] border-collapse  font-Ar mt-6 mb-8 table-auto",
+                    th: "px-2 bg-blueGray-50 text-blueGray-500 align-middle py-3  whitespace-nowrap font-semibold border-b border-[#E7EAEE] text-left text-sm md:text-base",
+                    td: "border-t-0 px-1 md:px-2  border-l-0 border-r-0 text-sm md:text-base whitespace-nowrap p-2 md:p-4 text-[#64748B] border-b border-[#E7EAEE] text-left font-semibold",
                     paginationSummary: "hidden md:block",
                     paginationButton: "border px-3 py-1 me-3",
                     paginationButtonCurrent:
