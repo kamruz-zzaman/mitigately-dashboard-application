@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import notificationIcons from "../../../assets/AccountLinks/notification.svg";
 import profileImg from "../../../assets/AccountLinks/profile-image.png";
-import userImg from "../../../assets/user-1.png";
+import userImg from "../../../assets/user2.jpg";
 
 const TackFollow = () => {
   const [notificationStatus, setNotificationStatus] = useState(true);
@@ -29,10 +29,9 @@ const TackFollow = () => {
 
         <div>
           <h1 className="text-[#191D23] font-bold text-3xl">
-            Your Subject here Your Subject here Your Subject here
+            Ticket # - Ticket Subject
             <span className="py-1 px-2.5 bg-[#ECFDF5] text-[#064E3B] rounded text-xs ml-4">
-              {" "}
-              Salved{" "}
+              Solved
             </span>
           </h1>
 
@@ -45,10 +44,15 @@ const TackFollow = () => {
                   {/* user profile */}
                   <div className="flex items-center gap-3">
                     <figure className="w-[3.3rem] h-[3.3rem] rounded-full">
-                      <img
-                        className="w-full h-full"
+                      {/* <img
+                        className="w-full h-full rounded-full"
                         src={userImg}
                         alt="user image"
+                      /> */}
+                      <img
+                        className="w-full h-full rounded-full"
+                        src="https://img.icons8.com/nolan/64/user-default.png"
+                        alt="user-default"
                       />
                     </figure>
 
@@ -78,9 +82,9 @@ const TackFollow = () => {
                   <div className="flex items-center gap-3">
                     <figure className="w-[3.3rem] h-[3.3rem] rounded-full">
                       <img
-                        className="w-full h-full"
-                        src={userImg}
-                        alt="user image"
+                        className="w-full h-full rounded-full"
+                        src="https://img.icons8.com/nolan/64/user-default.png"
+                        alt="user-default"
                       />
                     </figure>
 

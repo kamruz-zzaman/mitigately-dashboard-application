@@ -11,18 +11,36 @@ const Login = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const [phoneNumber, setPhoneNumber] = useState("");
   const handleReg = (e) => {
     e.preventDefault();
     // if (username == "admin" && password == "123456") {
-    if (number.split("").length === 10) {
+    if (phoneNumber.split("").length === 15) {
       navigate("/number-verify");
     } else {
-      alert("Number should be 10 digits");
+      alert("Type Number Properly");
     }
     // else {
     //   alert("username is admin and password is 123456");
     // }
+  };
+
+  const formatPhoneNumber = (inputValue) => {
+    // Remove all non-numeric characters from the input
+    const numericInput = inputValue.replace(/\D/g, "");
+
+    // Check if the input is 11 digits long
+    if (numericInput.length === 11) {
+      // Format the phone number as (XXX) XXX-XXXX
+      setPhoneNumber(
+        `(${numericInput.substring(0, 3)}) ${numericInput.substring(
+          3,
+          6
+        )}-${numericInput.substring(6)}`
+      );
+    } else {
+      setPhoneNumber(numericInput);
+    }
   };
 
   return (
@@ -38,15 +56,28 @@ const Login = () => {
             }}
           >
             <div
-              style={{ background: `url(${gradientBg})` }}
-              className="h-full flex items-center justify-center text-white"
+              style={{
+                background: `url(${gradientBg})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+              className="w-full border border-red-500 h-full flex items-center justify-center text-white"
             >
-              <div className="">
+              {/* <div className="">
                 <h2 className="text-[3rem] md:text-[4.25rem] text-center font-bold leading-[52px]  mx-auto mb-11 ">
                   <span className="block mb-7"> Mitigating | Dashboard</span>
                 </h2>
                 <p className="text-3xl w-10/12 text-center mx-auto">
                   Helping consumers mitigate overwhelming debt.
+                </p>
+              </div> */}
+              <div className="">
+                <h2 className="text-[3rem] md:text-[4.25rem] text-center font-bold leading-[52px] max-w-xl mx-auto mb-11 ">
+                  <span className="underline block mb-7"> Mitigating </span>{" "}
+                  Consumer Debt
+                </h2>
+                <p className="text-3xl w-10/12 text-center mx-auto">
+                  Together, we pave the way to a brighter, debt-free tomorrow.
                 </p>
               </div>
             </div>
@@ -115,8 +146,9 @@ const Login = () => {
                   <input
                     className="border-b border-[#E0E0E0] outline-none"
                     id="phoneNumber"
-                    type="tel"
-                    onChange={(e) => setNumber(e.target.value)}
+                    value={phoneNumber}
+                    onChange={(e) => formatPhoneNumber(e.target.value)}
+                    maxLength={14}
                   />
                 </div>
 
@@ -131,11 +163,6 @@ const Login = () => {
                       Remember me for 30 days
                     </label>
                   </div>
-
-                  <p className="hover:underline cursor-pointer">
-                    {" "}
-                    Reset Password{" "}
-                  </p>
                 </div>
 
                 <button
