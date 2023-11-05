@@ -230,10 +230,12 @@ const NumberVerify = () => {
                           onKeyDown={(e) => handleKeyDown(e, index)}
                           value={value}
                           ref={inputRefs[index]}
-                          style={{
-                            boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
-                          }}
-                          className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[2rem] sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem]"
+                          style={
+                            {
+                              // boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
+                            }
+                          }
+                          className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[2rem] sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem] custom_input"
                           type="number"
                           maxLength={1}
                         />

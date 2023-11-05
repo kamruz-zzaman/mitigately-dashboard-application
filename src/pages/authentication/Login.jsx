@@ -144,7 +144,7 @@ const Login = () => {
                     Phone Number{" "}
                   </label>
                   <input
-                    className="border-b border-[#E0E0E0] outline-none"
+                    className="border-b border-[#E0E0E0] outline-none active:bg-white focus:bg-white"
                     id="phoneNumber"
                     value={phoneNumber}
                     onChange={(e) => formatPhoneNumber(e.target.value)}
