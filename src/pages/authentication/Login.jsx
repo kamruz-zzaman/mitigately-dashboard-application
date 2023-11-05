@@ -143,15 +143,15 @@ const Login = () => {
                     className="cursor-pointer active:bg-white focus:bg-white bg-white"
                     // htmlFor="phoneNumber"
                   >
-                    {" "}
-                    Phone Number{" "}
+                    Phone Number
                   </p>
                   <input
-                    className="border-b border-[#E0E0E0] outline-none bg-white active:bg-white focus:bg-white"
+                    className="border-b border-[#E0E0E0] outline-none bg-white active:bg-white focus:bg-white mt-2 md:mt-0 focus:outline-none active:outline-none"
                     id="phoneNumber"
                     value={phoneNumber}
                     onChange={(e) => formatPhoneNumber(e.target.value)}
                     maxLength={14}
+                    type="tel"
                   />
                 </div>
 
