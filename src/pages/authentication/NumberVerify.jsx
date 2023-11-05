@@ -235,8 +235,8 @@ const NumberVerify = () => {
                               // boxShadow: "-1px 4px 10px 3px rgba(0, 0, 0, 0.09)",
                             }
                           }
-                          className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[3rem] flex justify-center items-center sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem] shadow border"
-                          type="number"
+                          className="w-[2rem] sm:w-[3rem] md:w-[4rem] h-[3rem] flex justify-center items-center sm:h-[3rem] md:h-[4rem] p-1 md:p-2 rounded-[3px] text-black font-semibold text-center outline-none text-[1.5rem] sm:text-[2.2rem] md:text-[3rem] shadow border focus:outline-none active:outline-none"
+                          type="tel"
                           maxLength={1}
                         />
                       ))}

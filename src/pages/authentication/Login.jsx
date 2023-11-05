@@ -139,13 +139,13 @@ const Login = () => {
               </p>
               <form onSubmit={handleReg} className="w-full">
                 <div className="flex flex-col text-left mb-6">
-                  <label
+                  <p
                     className="cursor-pointer active:bg-white focus:bg-white bg-white"
-                    htmlFor="phoneNumber"
+                    // htmlFor="phoneNumber"
                   >
                     {" "}
                     Phone Number{" "}
-                  </label>
+                  </p>
                   <input
                     className="border-b border-[#E0E0E0] outline-none bg-white active:bg-white focus:bg-white"
                     id="phoneNumber"
