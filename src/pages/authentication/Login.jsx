@@ -61,7 +61,7 @@ const Login = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="w-full border border-red-500 h-full flex items-center justify-center text-white"
+              className="w-full  h-full flex items-center justify-center text-white"
             >
               {/* <div className="">
                 <h2 className="text-[3rem] md:text-[4.25rem] text-center font-bold leading-[52px]  mx-auto mb-11 ">
