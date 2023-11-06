@@ -5,7 +5,7 @@ import { userLoggedOut } from "../features/auth/authSlice.js";
 import { toggleSidebar } from "../features/layout/layoutSlice";
 import MenuData from "./navbar-data/navMenuData";
 
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
 import { Menu, Transition } from "@headlessui/react";
 
 const Sidebar = () => {
@@ -33,7 +33,7 @@ const Sidebar = () => {
   return (
     <React.Fragment>
       <button
-        className="absolute top-6 left-8 block lg:hidden text-white z-50"
+        className="absolute top-[3.15rem] left-8 block lg:hidden text-white z-50"
         onClick={handleSidebar}
       >
         <svg

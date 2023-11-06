@@ -1,14 +1,14 @@
 import React, { Fragment } from "react";
 import UserImg from "../../assets/user.png";
 import { Menu, Transition } from "@headlessui/react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo1.png";
 import { Link } from "react-router-dom";
 
 const Profile = () => {
   return (
-    <div className="w-full flex justify-between md:justify-end items-center ">
+    <div className="w-full flex justify-between md:justify-end items-center pr-3 pl-12">
       <Link to="/" className="w-full">
-        <img src={logo} className="ps-3 md:ps-0 w-2/6 block md:hidden" alt="" />
+        <img src={logo} className=" md:ps-0 w-3/6 block md:hidden" alt="" />
       </Link>
       <div className="flex items-center gap-5 py-5">
         <Menu as="div" className="relative inline-block text-left">

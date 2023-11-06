@@ -19,7 +19,7 @@ const Layout = () => {
       <div className=" lg:ml-[250px] ml-0 grow ">
         <div
           onClick={handleNavClose}
-          className={`px-3 lg:px-4 xl:px-5 pt-20 pb-6 lg:pt-8 lg:pb-2 min-h-screen bg-white text-black overflow-y-scroll ${
+          className={`px-3 lg:px-4 xl:px-5 pt-8 pb-6 lg:pt-8 lg:pb-2 min-h-screen bg-white text-black overflow-y-scroll ${
             isSidebarOpen ? "fixed inset-0 bg-white opacity-95  z-50" : ""
           }`}
         >

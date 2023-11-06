@@ -49,7 +49,7 @@ const AccountLinks = () => {
           className="m-1 p-8 rounded-xl"
         >
           {/* top links */}
-          <div className="flex flex-col sm:flex-row justify-between items-center mb-10 text-center">
+          <div className="flex flex-col sm:flex-row justify-between items-center mb-10 text-center mt-6 md:mt-0">
             <Link
               className="flex items-center gap-3 text-xl md:text-xl mb-4 sm:mb-0"
               to=""
@@ -110,10 +110,10 @@ const AccountLinks = () => {
           </div>
 
           {/* body items */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-[94px] md:gap-y-[64px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10  md:gap-x-[94px] md:gap-y-[64px]">
             {originalData &&
               originalData.map((account, idx) => (
-                <AccountLinksCard key={idx} account={account} />
+                <AccountLinksCard key={idx} account={account} idx={idx} />
               ))}
 
             <button className="bg-[#0070D280] py-[101px] px-16 w-full h-full flex flex-col items-center justify-around gap-1 text-center rounded-xl">

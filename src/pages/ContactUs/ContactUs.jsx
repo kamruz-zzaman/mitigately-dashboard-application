@@ -19,13 +19,13 @@ const ContactUs = () => {
     <div>
       <Profile />
       <div
-        className="w-full p-5 rounded-2xl py-5 px-8"
+        className="w-full p-5 rounded-2xl py-5 px-6 lg:px-8"
         style={{ boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" }}
       >
         {/* Payment tabs*/}
-        <div className="flex items-center gap-7 mt-8 mb-9">
+        <div className="flex items-center gap-7 mt-8 mb-9 ps-0 lg:ps-6">
           <span
-            className={`font-Jost text-[16px] text-[#191D23] py-2 cursor-pointer font-semibold transition-all duration-300 ${
+            className={`font-Jost text-[16px] text-[#191D23] py-2  cursor-pointer font-semibold transition-all duration-300 ${
               ticketPage === "ticketOverview" &&
               "border-[#047857] border-b-2 font-semibold"
             }`}

@@ -82,10 +82,10 @@ const SettingOverview = () => {
         <TackFollow />
       ) : (
         <div className="mt-6 border-[#3048AD] p-[1px] rounded-2xl w-full">
-          <div className="h-full rounded-2xl py-4 px-8 max-w-full">
+          <div className="h-full rounded-2xl py-4 px-0 lg:px-8 max-w-full">
             {originalData.length ? (
               <div className="relative">
-                <div className="relative flex justify-between mb-3 mt-1    w-full flex-col lg:flex-row bg-transparent rounded overflow-x-auto">
+                <div className="relative flex justify-between mb-3 mt-1   w-full  flex-col lg:flex-row bg-transparent rounded overflow-x-auto">
                   {originalData.length ? (
                     <Grid
                       data={originalData.map((x) => [
@@ -196,11 +196,11 @@ const SettingOverview = () => {
                       //   limit: 10,
                       // }}
                       className={{
-                        container: "",
+                        container: " ",
                         table:
-                          "items-center bg-transparent min-w-[80vw] lg:min-w-[70vw] border-collapse  font-Ar mt-6 mb-8 table-auto",
-                        th: "px-2 bg-blueGray-50 text-blueGray-500 align-middle py-3 text-base whitespace-nowrap font-semibold border-b border-[#E7EAEE] text-left uppercase text-[#64748B]",
-                        td: "border-t-0 px-1 md:px-2  border-l-0 border-r-0 text-base whitespace-nowrap p-2 md:p-4  text-left border-b border-[#E7EAEE]",
+                          "items-center bg-transparent  mx-auto min-w-7000vw] lg:min-w-[60vw] border-collapse  font-Ar mt-6 mb-8 table-auto",
+                        th: "px-1.5 md:px-2 bg-blueGray-50 text-blueGray-500 align-middle py-3 text-xs lg:text-base whitespace-nowrap font-semibold border-b border-[#E7EAEE] text-left uppercase text-[#64748B]",
+                        td: "border-t-0   border-l-0 border-r-0 text-xs lg:text-base whitespace-nowrap p-1.5 md:p-2  text-left border-b border-[#E7EAEE]",
                         paginationSummary: "hidden md:block",
                         paginationButton: "border px-3 py-1 me-3 ",
                         paginationButtonCurrent:
